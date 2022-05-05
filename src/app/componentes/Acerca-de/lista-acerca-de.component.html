@@ -1,0 +1,21 @@
+
+<table class="table table-white" >
+
+  <tbody>
+    <div>
+    <tr *ngFor="let acerca of acercade">
+      <td>{{acerca.id}}</td>
+      <td>{{acerca.lugar_de_trabajo}}</td>
+      <td>{{acerca.titulo_de_puesto}}</td>
+      <td>{{acerca.url_logo_empresa}}</td>
+      <td>{{acerca.descripcion_de_actividades}}</td>
+
+      <td><button class="btn btn-outline-warning" routerLink="/editaracercade/{{acerca.id}}"><i class="far fa-edit"></i> Editar</button></td>
+      <td><button class="btn btn-outline-danger" (click)="borrar(acerca.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+
+    </tr>
+
+  </div>
+  </tbody>
+</table>
+

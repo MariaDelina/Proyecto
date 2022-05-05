@@ -1,0 +1,16 @@
+<nav class="nav">
+<main class="main">
+  <section class="seccion info">
+      <h2 class="h2">{{presentacion.fullName}}</h2>
+      <h3 class="h3">{{presentacion.titulo}}</h3>
+      <ul class="ul">
+          <li class="li"><a href="#" class="a" title="LinkedIn">{{presentacion.linkedIn}}</a></li>
+          <li class="li"><a href="#" class="a" title="GitHub">{{presentacion.gitHub}}</a></li>
+      </ul>
+
+  </section>
+  <button class="btn btn-outline-danger" routerLink="/editarpresentacion/{{presentacion.id}}"><i class="far fa-edit"></i> Editar</button>
+  <button class="btn btn-outline-warning" (click)="borrar(presentacion.id)"><i class="far fa-trash-alt"></i> Eliminar</button>
+</main>
+
+

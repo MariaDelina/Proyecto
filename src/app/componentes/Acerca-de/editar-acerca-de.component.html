@@ -1,0 +1,30 @@
+<div class="container" *ngIf="acercade">
+  <div class="row mt-5">
+      <div class="col-md-4 mx-auto">
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="lugar_de_trabajo">lugar_de_trabajo</label>
+                  <input type="text" class="form-control" id="acercade.lugar_de_trabajo" name="acercade.lugar_de_trabajo"
+                  [(ngModel)]="acercade.lugar_de_trabajo" required>
+              </div>
+              <div class="form-group">
+                  <label for="acercade.titulo_de_puesto">acercade.titulo_de_puesto</label>
+                  <input type="text" class="form-control" id="titulo_de_puesto" name="titulo_de_puesto"
+                  [(ngModel)]="acercade.titulo_de_puesto" required>
+              </div>
+              <div class="form-group">
+                  <label for="acercade.url_logo_empresa">acercade.url_logo_empresa</label>
+                  <input type="text" class="form-control" id="url_logo_empresa" name="url_logo_empresa"
+                  [(ngModel)]="acercade.url_logo_empresa" required>
+              </div>
+              <div class="form-group">
+                  <label for="descripcion_de_actividades">descripcion_de_actividades</label>
+                  <input type="text" class="form-control" id="descripcion_de_actividades" name="descripcion_de_actividades"
+                  [(ngModel)]="acercade.descripcion_de_actividades" required>
+              </div>
+
+              <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+          </form>
+      </div>
+  </div>
+</div>

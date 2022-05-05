@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-md-4 mx-auto">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="lugar_de_trabajo">Lugar de trabajo</label>
+                  <input type="text" class="form-control" id="lugar_de_trabajo" name="lugar_de_trabajo"
+                  [(ngModel)]="lugar_de_trabajo" required>
+              </div>
+              <div class="form-group">
+                  <label for="titulo">Titulo del puesto</label>
+                  <input type="text" class="form-control" id="titulo_de_puesto" name="titulo_de_puesto"
+                  [(ngModel)]="titulo_de_puesto" required>
+              </div>
+              <div class="form-group">
+                  <label for="anio_ingreso">Url del logo de la empresa</label>
+                  <input type="text" class="form-control" id="url_logo_empresa" name="url_logo_empresa"
+                  [(ngModel)]="url_logo_empresa" required>
+              </div>
+              <div class="form-group">
+                  <label for="anio_egreso">Año Egreso</label>
+                  <input type="text" class="form-control" id="descripcion_de_actividades" name="descripcion_de_actividades"
+                  [(ngModel)]="descripcion_de_actividades" required>
+              </div>
+              <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+          </form>
+      </div>
+  </div>
+</div>
